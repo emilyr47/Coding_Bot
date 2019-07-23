@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Coding Bot</title>
+
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Fascinate&display=swap" rel="stylesheet">
+
+</head>
+
+<body document.body.className += ' fade-out';
+    onload="typeWriter()">
+    <script>document.body.className += ' fade-out';
+        $(function () {
+            $('body').removeClass('fade-out');
+        });
+    </script>
+
+    <!--Load-->
+    <section id="load">
+        <div id="load">
+
+        </div>
+        <div id="hideMe" class="loader"></div>
+    </section>
+    <!--End Load-->
+
+    <!--Header-->
+    <section>
+        <header>
+        </header>
+    </section>
+    <!--End Header-->
+
+    <!--Left Side-->
+    <section>
+        <div id="left-side">
+
+        </div>
+    </section>
+    <!--End Left Side-->
+
+    <!--Right Side-->
+    <section>
+        <div id="right-side">
+                <form>
+                        <div class="form-group" id="user-typer">
+                          <label for="exampleFormControlTextarea1"></label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="type here" rows="3"></textarea>
+                        </div>
+                      </form>
+        </div>
+    </section>
+    <!--End Right Side-->
+
+    <!--Footer-->
+    <section>
+        <footer id="footer">
+
+        </footer>
+    </section>
+    <!--End Footer-->
+</body>
+<script>
+  var i = 0;
+  var txt = 'Hi, I am the Coding Bot.';
+  var speed = 50;
+  function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("load").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+</script>
+
+</html>
